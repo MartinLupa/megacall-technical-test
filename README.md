@@ -21,7 +21,3 @@ React-based responsive SPA.
 CSS + SCSS.
 Hooks: useState, useEffect, useContext.
 Router: use of protected routes.
-<<<<<<< HEAD
-=======
-
->>>>>>> c096b984e6e8f36bfd38c088ce82ce5baa0869d6
