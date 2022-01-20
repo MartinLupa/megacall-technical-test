@@ -1,0 +1,34 @@
+.footer-container {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ec7703;
+  color: #dfdddd;
+  text-align: center;
+}
+
+.icon {
+  margin: 10px;
+  color: white;
+}
+
+.linkedin-icon:hover {
+  color: #0e76a8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.git-icon:hover {
+  color: #dfdddd;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=Footer.css.map */

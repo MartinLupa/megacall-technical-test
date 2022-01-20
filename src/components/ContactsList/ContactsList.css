@@ -1,0 +1,23 @@
+.contacts-list {
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #d3d3d3;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.contacts-table button {
+  height: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d33939;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contacts-table button:hover {
+  background-color: #d46b6b;
+}
+/*# sourceMappingURL=ContactsList.css.map */

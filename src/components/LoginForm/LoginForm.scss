@@ -1,0 +1,33 @@
+@import "../../styles/Variables.scss";
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 40px;
+  width: 400px;
+  border: 1px solid $light-grey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  input {
+    border: 1px solid $light-grey;
+    border-radius: 5px;
+    height: 35px;
+    width: 350px;
+    margin: 10px;
+    padding-left: 10px;
+  }
+  button {
+    width: 370px;
+    height: 35px;
+    background-color: $green;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover {
+      background-color: $hover-green;
+    }
+  }
+}
