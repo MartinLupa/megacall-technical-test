@@ -11,17 +11,29 @@ export const App = () => {
     isLogged: false,
   });
   const [contactList, setContactList] = useState([]);
+  const [currentPage, setCurrentPage] = useState({ currentPage: 1 });
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=10&inc=name,email")
+    fetch(
+      `https://randomuser.me/api/?page=${currentPage}1&results=10&inc=name,email&seed=abc`
+    )
       .then((response) => response.json())
       .then((data) => setContactList(data.results));
-  }, []);
+  }, [currentPage]);
+
+  console.log(contactList);
 
   return (
     <div className="app-container">
       <GlobalContext.Provider
-        value={{ user, setUser, contactList, setContactList }}
+        value={{
+          user,
+          setUser,
+          contactList,
+          setContactList,
+          currentPage,
+          setCurrentPage,
+        }}
       >
         <PublicRouter />
       </GlobalContext.Provider>

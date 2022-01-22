@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "../../App";
+import { Pagination } from "../Pagination/Pagination";
 import "./ContactsList.css";
 
 export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
@@ -55,6 +56,7 @@ export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
           )}
         </tbody>
       </table>
+      <Pagination />
     </div>
   );
 };

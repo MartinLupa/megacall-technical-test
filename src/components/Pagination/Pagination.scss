@@ -1,0 +1,17 @@
+@import "../../styles//Variables.scss";
+
+.pagination {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    padding: 20px;
+    border: 1px solid $light-grey;
+  }
+}
+
+.active {
+  background-color: aqua;
+}
