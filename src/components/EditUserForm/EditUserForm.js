@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../App";
-import "./AddContactForm.css";
+import "./EditUserForm.css";
 
-export const AddContactForm = () => {
-  const { setContactList } = useContext(GlobalContext);
+export const EditUserForm = ({ currentUser, setIsEditing }) => {
+  const { setContactList, contactList } = useContext(GlobalContext);
 
-  const [title, setTitle] = useState("");
-  const [first, setFirst] = useState("");
-  const [last, setLast] = useState("");
-  const [email, setEmail] = useState("");
+  const [title, setTitle] = useState(currentUser.name.title);
+  const [first, setFirst] = useState(currentUser.name.first);
+  const [last, setLast] = useState(currentUser.name.last);
+  const [email, setEmail] = useState(currentUser.email);
 
   const handleTitleInput = (e) => {
     setTitle(e.target.value);
@@ -23,10 +23,15 @@ export const AddContactForm = () => {
     setEmail(e.target.value);
   };
 
-  const submitContact = (e) => {
+  const updateContact = (e) => {
     e.preventDefault();
-    const newContact = { name: { title, first, last }, email };
-    setContactList((prevList) => [newContact, ...prevList]);
+    setIsEditing(false);
+    const updatedContact = { name: { title, first, last }, email };
+    setContactList(
+      contactList.map((contact) =>
+        contact.email === currentUser.email ? updatedContact : contact
+      )
+    );
     setTitle("");
     setFirst("");
     setLast("");
@@ -34,8 +39,8 @@ export const AddContactForm = () => {
   };
 
   return (
-    <form onSubmit={submitContact} className="add-contact-form" action="">
-      <h2>Add user</h2>
+    <form onSubmit={updateContact} className="add-contact-form" action="">
+      <h2>Edit user</h2>
       <label htmlFor="contact-title">Title:</label>
       <input id="title" onChange={handleTitleInput} value={title} type="text" />
 
@@ -53,7 +58,7 @@ export const AddContactForm = () => {
         type="email"
       />
 
-      <button type="submit">Add contact</button>
+      <button type="submit">Edit User</button>
     </form>
   );
 };
