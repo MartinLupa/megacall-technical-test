@@ -5,13 +5,6 @@ import "./ContactsList.css";
 export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
   const { contactList, setContactList } = useContext(GlobalContext);
 
-  useEffect(() => {
-    fetch("https://randomuser.me/api/?results=10&inc=name,email")
-      .then((response) => response.json())
-      .then((data) => setContactList(data.results));
-  }, []);
-
-  console.log(contactList);
   const deleteContact = (email) => {
     setContactList(contactList.filter((item) => item.email !== email));
   };

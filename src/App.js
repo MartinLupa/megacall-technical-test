@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import "./App.css";
 import { PublicRouter } from "./routers/PublicRouter";
 
@@ -11,6 +11,12 @@ export const App = () => {
     isLogged: false,
   });
   const [contactList, setContactList] = useState([]);
+
+  useEffect(() => {
+    fetch("https://randomuser.me/api/?results=10&inc=name,email")
+      .then((response) => response.json())
+      .then((data) => setContactList(data.results));
+  }, []);
 
   return (
     <div className="app-container">

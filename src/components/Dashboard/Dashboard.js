@@ -1,19 +1,40 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "../../App";
 import { AddContactForm } from "../AddContactForm/AddContactForm";
 import { ContactsList } from "../ContactsList/ContactsList";
 import { EditUserForm } from "../EditUserForm/EditUserForm";
+import { FilteredContactList } from "../FilteredContactList/FilteredContactList";
 import "./Dashboard.css";
 
 export const Dashboard = () => {
+  const { contactList } = useContext(GlobalContext);
+  const [filteredList, setFilteredList] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [currentUser, setCurrentUser] = useState({
     name: { title: "", first: "", last: "" },
     email: "",
   });
 
-  const handleSearch = () => {};
-  const handleQueryChange = () => {};
-  console.log("CURRENT", currentUser);
+  const handleQueryChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (!searchQuery) {
+      setFilteredList([]);
+    }
+    if (searchQuery) {
+      setFilteredList(
+        contactList.filter((contact) =>
+          contact.name.first.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+      );
+    }
+    setSearchQuery("");
+  };
+
+  console.log("FILTERED LIST", filteredList);
 
   return (
     <div className="dashboard-container">
@@ -27,7 +48,7 @@ export const Dashboard = () => {
             className="form-text text-muted form-control"
             placeholder="Search movie.."
             onChange={handleQueryChange}
-            value=""
+            value={searchQuery}
           />
         </div>
       </form>
@@ -38,10 +59,19 @@ export const Dashboard = () => {
           <AddContactForm />
         )}
 
-        <ContactsList
-          setIsEditing={setIsEditing}
-          setCurrentUser={setCurrentUser}
-        />
+        {filteredList.length > 0 ? (
+          <FilteredContactList
+            setIsEditing={setIsEditing}
+            setCurrentUser={setCurrentUser}
+            filteredList={filteredList}
+            setFilteredList={setFilteredList}
+          />
+        ) : (
+          <ContactsList
+            setIsEditing={setIsEditing}
+            setCurrentUser={setCurrentUser}
+          />
+        )}
       </div>
     </div>
   );
