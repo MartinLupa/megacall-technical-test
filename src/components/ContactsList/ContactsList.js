@@ -40,10 +40,18 @@ export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
                 </td>
                 <td>{contact.email}</td>
                 <td>
-                  <button onClick={(e) => editContact(contact)}>Edit</button>
+                  <button
+                    className="edit-btn"
+                    onClick={(e) => editContact(contact)}
+                  >
+                    Edit
+                  </button>
                 </td>
                 <td>
-                  <button onClick={(e) => deleteContact(contact.email)}>
+                  <button
+                    className="delete-btn"
+                    onClick={(e) => deleteContact(contact.email)}
+                  >
                     X
                   </button>
                 </td>

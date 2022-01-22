@@ -7,17 +7,7 @@
   border-radius: 5px;
 }
 
-.contacts-table button {
-  height: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #d33939;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.contacts-table button:hover {
-  background-color: #d46b6b;
+.edit-btn {
+  background-color: #2d9e64;
 }
 /*# sourceMappingURL=ContactsList.css.map */

@@ -8,16 +8,6 @@
   border-radius: 5px;
 }
 
-.contacts-table {
-  button {
-    height: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: $red;
-    transition: 0.3s;
-    &:hover {
-      background-color: $hover-red;
-    }
-  }
+.edit-btn {
+  background-color: $green;
 }
