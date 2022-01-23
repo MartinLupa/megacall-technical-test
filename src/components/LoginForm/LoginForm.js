@@ -25,6 +25,7 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleLogin} className="login-form" action="">
+      <p>Please use any email valid format + password to Log in</p>
       <label htmlFor="email">Email: </label>
       <input
         id="email"

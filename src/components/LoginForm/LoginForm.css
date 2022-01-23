@@ -10,3 +10,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
+
+.login-form p {
+  font-style: italic;
+  color: #ffaa1b;
+}
+
+.login-form button {
+  width: 415px;
+}

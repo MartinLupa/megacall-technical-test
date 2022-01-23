@@ -37,6 +37,10 @@ input {
   border-radius: 5px;
 }
 
+.add-edit-form button {
+  width: 565px;
+}
+
 .btn-success {
   color: #ffffff;
   width: 100%;
