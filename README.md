@@ -1,5 +1,6 @@
 # Megacall Technical test
 
+Deploy: https://contacts-list-react-crud.vercel.app/login
 Author: Martin I. Lupa Groppelli, January 2022.
 
 Contacts list with full CRUD.
