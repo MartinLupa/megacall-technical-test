@@ -1,9 +1,11 @@
 # Megacall Technical test
 
 Deploy: https://contacts-list-react-crud.vercel.app/login
+
 Author: Martin I. Lupa Groppelli, January 2022.
 
 Contacts list with full CRUD.
+
 Use of protected routes, which restricts the access to logged users only.
 
 ## How to use
