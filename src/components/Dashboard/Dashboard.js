@@ -37,7 +37,7 @@ export const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <h1>Contacts List</h1>
-      <form onSubmit={handleSearch} className="movie-search-form" action="">
+      <form onSubmit={handleSearch} className="search-form" action="">
         <div>
           <label htmlFor="query"></label>
           <input

@@ -1,5 +1,10 @@
 .header-container {
+  width: 100%;
   text-align: center;
   color: white;
   background-color: #ffaa1b;
+}
+
+.header-container h1 {
+  margin-top: 20px;
 }

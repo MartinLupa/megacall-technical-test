@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   color: rgb(104, 103, 103);
 }
@@ -22,6 +23,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .add-edit-form {
@@ -76,5 +78,15 @@ input {
   .add-edit-form {
     margin-right: 0px;
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .add-edit-form {
+    width: 290px;
+  }
+
+  .add-edit-form button {
+    width: 260px;
   }
 }
