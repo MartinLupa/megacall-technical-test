@@ -34,19 +34,17 @@ export const Dashboard = () => {
     setSearchQuery("");
   };
 
-  console.log("FILTERED LIST", filteredList);
-
   return (
     <div className="dashboard-container">
       <h1>Contacts List</h1>
       <form onSubmit={handleSearch} className="movie-search-form" action="">
-        <div className="form-group">
+        <div>
           <label htmlFor="query"></label>
           <input
+            className="search-input"
             id="query"
             type="text"
-            className="form-text text-muted form-control"
-            placeholder="Search movie.."
+            placeholder="Search contact by name"
             onChange={handleQueryChange}
             value={searchQuery}
           />

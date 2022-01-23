@@ -11,7 +11,7 @@ export const App = () => {
     isLogged: false,
   });
   const [contactList, setContactList] = useState([]);
-  const [currentPage, setCurrentPage] = useState({ currentPage: 1 });
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     fetch(

@@ -28,7 +28,6 @@ export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
           <tr>
             <th>Full name</th>
             <th>Email</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -41,7 +40,7 @@ export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
                 <td>{contact.email}</td>
                 <td>
                   <button
-                    className="edit-btn"
+                    className="btn-success"
                     onClick={(e) => editContact(contact)}
                   >
                     Edit
@@ -49,7 +48,7 @@ export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
                 </td>
                 <td>
                   <button
-                    className="delete-btn"
+                    className="btn-danger"
                     onClick={(e) => deleteContact(contact.email)}
                   >
                     X

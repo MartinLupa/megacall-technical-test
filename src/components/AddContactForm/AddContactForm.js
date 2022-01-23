@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../App";
-import "./AddContactForm.css";
 
 export const AddContactForm = () => {
   const { setContactList } = useContext(GlobalContext);
@@ -34,7 +33,7 @@ export const AddContactForm = () => {
   };
 
   return (
-    <form onSubmit={submitContact} className="add-contact-form" action="">
+    <form onSubmit={submitContact} className="add-edit-form" action="">
       <h2>Add user</h2>
       <label htmlFor="contact-title">Title:</label>
       <input id="title" onChange={handleTitleInput} value={title} type="text" />
@@ -53,7 +52,9 @@ export const AddContactForm = () => {
         type="email"
       />
 
-      <button type="submit">Add contact</button>
+      <button className="btn-success" type="submit">
+        Add contact
+      </button>
     </form>
   );
 };

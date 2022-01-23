@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../App";
-import "./FilteredContactList.css";
 
 export const FilteredContactList = ({
   setIsEditing,
@@ -45,10 +44,20 @@ export const FilteredContactList = ({
               </td>
               <td>{contact.email}</td>
               <td>
-                <button onClick={(e) => editContact(contact)}>Edit</button>
+                <button
+                  className="btn-success"
+                  onClick={(e) => editContact(contact)}
+                >
+                  Edit
+                </button>
               </td>
               <td>
-                <button onClick={(e) => deleteContact(contact.email)}>X</button>
+                <button
+                  className="btn-danger"
+                  onClick={(e) => deleteContact(contact.email)}
+                >
+                  X
+                </button>
               </td>
             </tr>
           ))}

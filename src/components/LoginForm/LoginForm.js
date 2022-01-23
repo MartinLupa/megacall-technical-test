@@ -43,7 +43,9 @@ export const LoginForm = () => {
         placeholder="Insert your password"
       />
 
-      <button type="submit">Login</button>
+      <button className="btn-success" type="submit">
+        Login
+      </button>
     </form>
   );
 };

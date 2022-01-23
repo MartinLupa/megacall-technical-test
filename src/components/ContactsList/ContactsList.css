@@ -1,13 +1,12 @@
 .contacts-list {
+  width: 550px;
   padding: 20px;
   text-align: left;
-  border: 1px solid #d3d3d3;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #e9e5e5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
-.edit-btn {
-  background-color: #2d9e64;
+.contacts-table {
+  width: 100%;
 }
-/*# sourceMappingURL=ContactsList.css.map */

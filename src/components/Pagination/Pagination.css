@@ -1,22 +1,15 @@
 .pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination li {
-  padding: 20px;
-  border: 1px solid #d3d3d3;
+  padding: 10px 20px;
+  border: 1px solid #e9e5e5;
 }
 
 .active {
-  background-color: aqua;
+  background-color: #34c780;
 }
-/*# sourceMappingURL=Pagination.css.map */
