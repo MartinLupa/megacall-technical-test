@@ -1,8 +1,10 @@
 # Megacall Technical test
 
+Deploy:
 Author: Martin I. Lupa Groppelli, January 2022.
 
-Contact list that allows to create and delete new contacts. Use of protected routes, which restricts the access to logged users only.
+Contacts list with full CRUD.
+Use of protected routes, which restricts the access to logged users only.
 
 ## How to use
 
