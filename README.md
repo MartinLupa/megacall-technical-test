@@ -1,6 +1,6 @@
 # Megacall Technical test
 
-Deploy:
+Deploy: https://martinlupa.github.io/megacall-technical-test/
 Author: Martin I. Lupa Groppelli, January 2022.
 
 Contacts list with full CRUD.
