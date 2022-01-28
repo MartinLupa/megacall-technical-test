@@ -5,7 +5,7 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  color: rgb(104, 103, 103);
+  color: rgb(117, 116, 116);
 }
 
 input {
@@ -69,6 +69,26 @@ input {
 
 .btn-danger:hover {
   background-color: #f08362;
+}
+
+.edit-icon {
+  color: #2d9e64;
+  width: 40px;
+  transition: 0.3s;
+}
+
+.edit-icon:hover {
+  color: #34c780;
+}
+
+.delete-icon {
+  color: #f15223;
+  width: 40px;
+  transition: 0.3s;
+}
+
+.delete-icon:hover {
+  color: #f08362;
 }
 
 @media only screen and (max-width: 1150px) {
