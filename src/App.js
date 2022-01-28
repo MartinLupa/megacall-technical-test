@@ -21,8 +21,6 @@ export const App = () => {
       .then((data) => setContactList(data.results));
   }, [currentPage]);
 
-  console.log(contactList);
-
   return (
     <div className="app-container">
       <GlobalContext.Provider

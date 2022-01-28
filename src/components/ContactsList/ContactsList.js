@@ -5,7 +5,7 @@ import { GlobalContext } from "../../App";
 import { Pagination } from "../Pagination/Pagination";
 import "./ContactsList.css";
 
-export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
+export const ContactsList = ({ setIsEditing, setCurrentContact }) => {
   const { contactList, setContactList } = useContext(GlobalContext);
 
   const deleteContact = (email) => {
@@ -13,7 +13,7 @@ export const ContactsList = ({ setIsEditing, setCurrentUser }) => {
   };
   const editContact = (contact) => {
     setIsEditing(true);
-    setCurrentUser({
+    setCurrentContact({
       name: {
         title: contact.name.title,
         first: contact.name.first,

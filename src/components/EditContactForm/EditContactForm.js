@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../App";
 
-export const EditUserForm = ({ currentUser, setIsEditing }) => {
+export const EditContactForm = ({ currentUser, setIsEditing }) => {
   const { setContactList, contactList } = useContext(GlobalContext);
 
   const [title, setTitle] = useState(currentUser.name.title);

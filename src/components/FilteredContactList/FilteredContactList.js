@@ -1,3 +1,5 @@
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+import ModeEditOutlineOutlinedIcon from "@mui/icons-material/ModeEditOutlineOutlined";
 import React, { useContext } from "react";
 import { GlobalContext } from "../../App";
 
@@ -44,20 +46,16 @@ export const FilteredContactList = ({
               </td>
               <td>{contact.email}</td>
               <td>
-                <button
-                  className="btn-success"
+                <ModeEditOutlineOutlinedIcon
+                  className="edit-icon"
                   onClick={(e) => editContact(contact)}
-                >
-                  Edit
-                </button>
+                />
               </td>
               <td>
-                <button
-                  className="btn-danger"
+                <DeleteOutlineOutlinedIcon
+                  className="delete-icon"
                   onClick={(e) => deleteContact(contact.email)}
-                >
-                  X
-                </button>
+                />
               </td>
             </tr>
           ))}

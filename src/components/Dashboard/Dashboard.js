@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../App";
 import { AddContactForm } from "../AddContactForm/AddContactForm";
 import { ContactsList } from "../ContactsList/ContactsList";
-import { EditUserForm } from "../EditUserForm/EditUserForm";
+import { EditContactForm } from "../EditContactForm/EditContactForm";
 import { FilteredContactList } from "../FilteredContactList/FilteredContactList";
 import "./Dashboard.css";
 
@@ -11,7 +11,7 @@ export const Dashboard = () => {
   const [filteredList, setFilteredList] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [isEditing, setIsEditing] = useState(false);
-  const [currentUser, setCurrentUser] = useState({
+  const [currentContact, setCurrentContact] = useState({
     name: { title: "", first: "", last: "" },
     email: "",
   });
@@ -52,7 +52,10 @@ export const Dashboard = () => {
       </form>
       <div className="center-container">
         {isEditing ? (
-          <EditUserForm currentUser={currentUser} setIsEditing={setIsEditing} />
+          <EditContactForm
+            currentContact={currentContact}
+            setIsEditing={setIsEditing}
+          />
         ) : (
           <AddContactForm />
         )}
@@ -60,14 +63,14 @@ export const Dashboard = () => {
         {filteredList.length > 0 ? (
           <FilteredContactList
             setIsEditing={setIsEditing}
-            setCurrentUser={setCurrentUser}
+            setCurrentContact={setCurrentContact}
             filteredList={filteredList}
             setFilteredList={setFilteredList}
           />
         ) : (
           <ContactsList
             setIsEditing={setIsEditing}
-            setCurrentUser={setCurrentUser}
+            setCurrentContact={setCurrentContact}
           />
         )}
       </div>
